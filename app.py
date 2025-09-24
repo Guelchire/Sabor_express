@@ -6,6 +6,7 @@ restaurantes = [{'nome':'Pastelito', 'categoria':'Pastel', 'ativo':False},
 ]
 
 def exibir_nome_do_programa():
+    '''Exibir nome do programa'''
     print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -16,25 +17,30 @@ def exibir_nome_do_programa():
 """)
 
 def exibir_opcoes():
+    '''Exibir opções do sistema'''
     print('1. Cadastrar restaurante')
     print('2. Listar restaurante')
     print('3. Alterar estado do restaurante')
     print('4. Sair\n')
 
 def finalizar_app():
+    ''' função para finalizar o app'''
     exibir_subtitulo("Finalizar app")
     
     
 def voltar_ao_menu_principal():
+    '''Função para voltar ao menu do sistema'''
     input("Digite uma tecla para voltar ao menu principal: ")
     main()
     
 def opcao_invalida():
+    '''Função para caso coloque alguma outra forma de escrita'''
     print("Opção invalida!\n")
     voltar_ao_menu_principal()
     
 
 def exibir_subtitulo(texto):
+    '''Função para apagar o terminal e estilizar'''
     os.system('cls')
     linha = '*' * (len(texto))
     print(linha)
@@ -62,6 +68,8 @@ def cadastrar_novo_restaurante():
     
     
 def listar_restaurantes():
+    ''' Lista os restaurantes com o espaçamento devido'''
+    
     exibir_subtitulo("Listando os restaurantes")
     
     print(f'{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | {'Status'}' )
@@ -74,6 +82,15 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
     
 def alternar_estado_restaurante():
+    '''Função para alternar o estado do restuarante com laço de repetição.
+    
+    input: 
+    - Digitar o nome do restaurante que deseja alterar o estado.
+    
+    outputs:
+    - Mostra o restaurante que houve a troca de estado.
+    
+    '''
     exibir_subtitulo("Alternar estado do restaurante")
     nome_restaurante = input('Digite o nome do restaurante que deseja alternar o estado: ')
     restaurante_encontrado = False
@@ -91,6 +108,14 @@ def alternar_estado_restaurante():
     voltar_ao_menu_principal()
 
 def escolher_opcao():
+    '''Função para escolher as opções
+    
+    input:
+    - Escolher alguma opção
+    
+    output:
+    - Ir na opção escolhida
+    '''
     try:
         opcao_escolhida = int(input('Escolha alguma opção: '))
 
@@ -110,6 +135,7 @@ def escolher_opcao():
 
 
 def main():
+    '''Função do menu principal'''
     os.system('cls')
     exibir_nome_do_programa()
     exibir_opcoes()
