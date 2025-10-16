@@ -50,12 +50,9 @@ def exibir_subtitulo(texto):
     
 def cadastrar_novo_restaurante():
     '''Essa função é responsável por cadastrar um novo restaurante
-    
     inputs:
     - Nome do restaurante
     - Categoria do restaurante
-    
-    outputs:
     - Adciona um novo restaurante a lista de restaurantes
     '''
     exibir_subtitulo("Cadastro de novos restaurantes")
@@ -82,14 +79,11 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
     
 def alternar_estado_restaurante():
-    '''Função para alternar o estado do restuarante com laço de repetição.
-    
+    '''Função para alternar o estado do restuarante com laço de repetição. 
     input: 
     - Digitar o nome do restaurante que deseja alterar o estado.
-    
     outputs:
     - Mostra o restaurante que houve a troca de estado.
-    
     '''
     exibir_subtitulo("Alternar estado do restaurante")
     nome_restaurante = input('Digite o nome do restaurante que deseja alternar o estado: ')
@@ -109,10 +103,8 @@ def alternar_estado_restaurante():
 
 def escolher_opcao():
     '''Função para escolher as opções
-    
     input:
     - Escolher alguma opção
-    
     output:
     - Ir na opção escolhida
     '''
